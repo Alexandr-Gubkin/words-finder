@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <form th:action="@{/testPut}" method="post" th:object="${pet}">
+        <p>Введи имя<input type="text" th:field="*{name}" /></p>
+        <p><input type="submit" value="Сабмит" />
+    </form>
+
+
+    <form th:action="@{/testfind}" method="post" th:object="${pet}">
+        <p>Найди имя<input type="text" th:field="*{name}" /></p>
+        <p><input type="submit" value="Сабмит" />
+    </form>
+
+
+    <h4>Результат:</h4>
+    <div th:text="${vivod}"></div>
+
+</body>
+</html>
